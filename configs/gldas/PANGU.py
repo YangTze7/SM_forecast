@@ -1,0 +1,11 @@
+method = 'PANGU'
+C = 192
+depth = [1, 2, 2, 1]
+n_heads = [1, 2, 2, 1]
+D = 4
+lr = 5e-4
+batch_size = 8
+val_batch_size = 8
+drop_path = 0.1
+sched = 'cosine'
+warmup_epoch = 0
