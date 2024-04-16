@@ -122,7 +122,7 @@ class WeatherBenchDataset(Dataset):
 
 
         self.ds_path = load_tiff_path(self.data_root,'SoilMoi0_10cm_inst',self.training_time)
-        
+        self.ds_path = sorted(self.ds_path)
 
         self.valid_idx = self.ds_path.__len__()-20
 
@@ -159,7 +159,7 @@ class WeatherBenchDataset(Dataset):
         
         
         var_data = []
-        for t in range(20):
+        for t in range(12):
             idx = index+t
             soilm_path = self.ds_path[idx]
             path_vars = get_other_vartpath(soilm_path)
